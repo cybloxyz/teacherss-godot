@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvl0blwlmw8kg"]
+
+[ext_resource type="Texture2D" uid="uid://d3mrwfdbem7it" path="res://assets/act.png" id="1_6lvrv"]
+[ext_resource type="Texture2D" uid="uid://7nkfl64ss83a" path="res://assets/act-export.png" id="2_2x6vi"]
+
+[node name="BtnInteract" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="." groups=["interact_buttons"]]
+visible = false
+position = Vector2(850, 486)
+texture_normal = ExtResource("1_6lvrv")
+texture_pressed = ExtResource("2_2x6vi")
+passby_press = true

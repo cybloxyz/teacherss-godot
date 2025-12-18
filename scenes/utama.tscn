@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://yfqq03s5f6vp"]
+[gd_scene load_steps=6 format=4 uid="uid://yfqq03s5f6vp"]
 
 [ext_resource type="TileSet" uid="uid://6wmiaduxrg5e" path="res://utama.tres" id="1_axo4b"]
 [ext_resource type="PackedScene" uid="uid://dt2r3cfixp453" path="res://scenes/player.tscn" id="2_5ybgb"]
+[ext_resource type="PackedScene" uid="uid://dvl0blwlmw8kg" path="res://scenes/act.tscn" id="3_33w3w"]
 [ext_resource type="PackedScene" uid="uid://bvblc7ansuxh0" path="res://scenes/control.tscn" id="3_o1p7s"]
+[ext_resource type="PackedScene" uid="uid://v6ggjpk8dpq5" path="res://interact/board.tscn" id="5_llab0"]
 
 [node name="utama" type="Node2D"]
 
@@ -24,6 +26,11 @@ tile_set = ExtResource("1_axo4b")
 
 [node name="TileMapLayer5" type="TileMapLayer" parent="."]
 
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Board" parent="Node2D" instance=ExtResource("5_llab0")]
+position = Vector2(805, 181)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_5ybgb")]
 position = Vector2(69, 150)
 
@@ -31,6 +38,8 @@ position = Vector2(69, 150)
 limit_smoothed = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BtnInteract" parent="CanvasLayer" instance=ExtResource("3_33w3w")]
 
 [node name="control" parent="CanvasLayer" instance=ExtResource("3_o1p7s")]
 anchors_preset = -1

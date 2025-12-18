@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://v6ggjpk8dpq5"]
+
+[ext_resource type="Texture2D" uid="uid://d0x7ly18vc4l" path="res://assets/tcd.png" id="1_4nvie"]
+[ext_resource type="Script" uid="uid://b7nw8l888076i" path="res://dialog/interactable.gd" id="1_npfln"]
+[ext_resource type="Resource" uid="uid://78rn7k0jgfac" path="res://dialog/board.dialogue" id="2_bjhj4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npfln"]
+size = Vector2(126, 72)
+
+[node name="Board" type="Area2D"]
+script = ExtResource("1_npfln")
+dialogue_resource = ExtResource("2_bjhj4")
+
+[node name="Tcd" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+texture = ExtResource("1_4nvie")
+region_enabled = true
+region_rect = Rect2(15, 79, 99, 51)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_npfln")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
