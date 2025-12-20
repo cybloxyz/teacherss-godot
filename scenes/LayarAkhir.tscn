@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://gejerjtcwplj" path="res://script/button.gd" id="2_bp8td"]
 
 [node name="LayarAkhir" type="ColorRect" groups=["final_ui"]]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,7 +25,6 @@ offset_right = 217.0
 offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -40,7 +38,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_upqfn")
 text = "punya pesan untuk kami? "
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer" groups=["input_email"]]
 custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_upqfn")
@@ -52,3 +50,5 @@ size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_upqfn")
 text = "kirim balasan"
 script = ExtResource("2_bp8td")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_pressed"]

@@ -25,4 +25,24 @@ func munculkan_notif_akhir():
 			text_edit.grab_focus()
 		# Sembunyikan kontrol jalan agar tidak mengganggu ngetik
 		
+func _on_pressed():
+	var input_node = get_tree().get_first_node_in_group("input_email")
+	var button_node = $LayarAkhir/VBoxContainer/Button # Sesuaikan path-nya
+	var label_terimakasih = $LayarAkhir/VBoxContainer/Label # Label ucapan
+	
+	if input_node and input_node.text.strip_edges() != "":
+		var email = "nafisanailalh7@gmail.com" 
+		var subjek = "Balasan dari Guru".uri_encode() 
+		var isi = input_node.text.uri_encode()
+		
+		# 1. Buka aplikasi email
+		OS.shell_open("mailto:" + email + "?subject=" + subjek + "&body=" + isi)
+		
+		# 2. Hilangkan input dan tombol
+		input_node.visible = false
+		button_node.visible = false
+		
+		# 3. Ubah teks label agar lebih manis
+		label_terimakasih.text = "Pesan sudah dikirim!\nTerima kasih sudah berpartisipasi."
+		
 		
