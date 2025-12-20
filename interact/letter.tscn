@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://boyjabwtw76ve"]
+[gd_scene load_steps=5 format=3 uid="uid://boyjabwtw76ve"]
 
 [ext_resource type="Script" uid="uid://b7nw8l888076i" path="res://dialog/interactable.gd" id="1_b0ij7"]
 [ext_resource type="Texture2D" uid="uid://d0x7ly18vc4l" path="res://assets/tcd.png" id="2_4euif"]
+[ext_resource type="Resource" uid="uid://dphwtto4q4my" path="res://dialog/letter.dialogue" id="2_xfbns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfbns"]
 size = Vector2(70, 36)
 
 [node name="Letter" type="Area2D"]
 script = ExtResource("1_b0ij7")
+dialogue_resource = ExtResource("2_xfbns")
 
 [node name="Tcd" type="Sprite2D" parent="."]
 position = Vector2(4, -2)

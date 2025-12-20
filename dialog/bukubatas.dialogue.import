@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dwk1gb3bainlw"
+path="res://.godot/imported/bukubatas.dialogue-b7600199aaee0b882ce47fd6cd2b5ddb.tres"
+
+[deps]
+
+source_file="res://dialog/bukubatas.dialogue"
+dest_files=["res://.godot/imported/bukubatas.dialogue-b7600199aaee0b882ce47fd6cd2b5ddb.tres"]
+
+[params]
+
+defaults=true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvblc7ansuxh0"]
+[gd_scene load_steps=6 format=3 uid="uid://bvblc7ansuxh0"]
 
 [ext_resource type="Texture2D" uid="uid://bfh5hnovj0fk2" path="res://assets/arrow.png" id="1_r67kn"]
 [ext_resource type="Texture2D" uid="uid://b44wyhbfcfib" path="res://assets/arrow-export.png" id="2_brbbq"]
 [ext_resource type="Texture2D" uid="uid://btsjvrewgbkfx" path="res://assets/base.png" id="3_8n18e"]
 [ext_resource type="Texture2D" uid="uid://bwyt6cgurasyt" path="res://assets/stick.png" id="4_tjwpk"]
+[ext_resource type="FontFile" uid="uid://bx2sad4rgpvqn" path="res://addons/dialogue_manager/example_balloon/1_Minecraft-Regular.ttf" id="5_tjwpk"]
 
 [node name="control" type="Control"]
 layout_mode = 3
@@ -34,3 +35,28 @@ texture_normal = ExtResource("3_8n18e")
 texture_pressed = ExtResource("4_tjwpk")
 passby_press = true
 action = "ui_accept"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -67.5
+offset_right = 67.5
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer" groups=["ui_label"]]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_tjwpk")
+theme_override_font_sizes/font_size = 48
+text = "0/12"
+horizontal_alignment = 1
+justification_flags = 171

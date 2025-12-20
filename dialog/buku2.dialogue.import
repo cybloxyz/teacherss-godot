@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dxgw4sd40njnm"
+path="res://.godot/imported/buku2.dialogue-8ef61b72f4be7f5f9d0b05d69de57f9e.tres"
+
+[deps]
+
+source_file="res://dialog/buku2.dialogue"
+dest_files=["res://.godot/imported/buku2.dialogue-8ef61b72f4be7f5f9d0b05d69de57f9e.tres"]
+
+[params]
+
+defaults=true

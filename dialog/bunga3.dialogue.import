@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvyoessfbrihw"
+path="res://.godot/imported/bunga3.dialogue-1d41d467d931c715d53fbb649c62e84a.tres"
+
+[deps]
+
+source_file="res://dialog/bunga3.dialogue"
+dest_files=["res://.godot/imported/bunga3.dialogue-1d41d467d931c715d53fbb649c62e84a.tres"]
+
+[params]
+
+defaults=true

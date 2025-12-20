@@ -7,6 +7,7 @@ class_name Interactable # Ini kunci agar script bisa dikenali secara global
 
 # Node referensi tombol (kita asumsikan tombol ada di dalam CanvasLayer)
 var interact_btn: TouchScreenButton
+var was_collected: bool = false # Untuk mencatat apakah sudah diambil
 
 func _ready():
 	# Mencari tombol interaksi di dalam scene Utama secara otomatis
@@ -40,3 +41,13 @@ func _on_body_exited(body):
 func _start_dialog():
 	if dialogue_resource:
 		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+		
+		# Jika barang ini adalah barang koleksi (misal koin/kertas)
+		# panggil fungsi koleksi
+		if not was_collected:
+			GameManager.collect_item()
+			was_collected = true
+			queue_free()
+		
+		# Opsional: Hapus objek setelah diambil agar tidak diklik dua kali
+		# queue_free()

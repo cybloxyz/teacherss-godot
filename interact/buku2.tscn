@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfitx3u5fspk2"]
+[gd_scene load_steps=5 format=3 uid="uid://cfitx3u5fspk2"]
 
 [ext_resource type="Script" uid="uid://b7nw8l888076i" path="res://dialog/interactable.gd" id="1_5gxpw"]
 [ext_resource type="Texture2D" uid="uid://d0x7ly18vc4l" path="res://assets/tcd.png" id="2_bs285"]
+[ext_resource type="Resource" uid="uid://dxgw4sd40njnm" path="res://dialog/buku2.dialogue" id="2_hi50n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hi50n"]
 size = Vector2(50, 58)
 
 [node name="Buku2" type="Area2D"]
 script = ExtResource("1_5gxpw")
+dialogue_resource = ExtResource("2_hi50n")
 
 [node name="Tcd" type="Sprite2D" parent="."]
 position = Vector2(-1, 1)

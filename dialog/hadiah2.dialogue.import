@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cx7vjvusqap58"
+path="res://.godot/imported/hadiah2.dialogue-9ac8eab3cd2149d3d7812b90e1a314ba.tres"
+
+[deps]
+
+source_file="res://dialog/hadiah2.dialogue"
+dest_files=["res://.godot/imported/hadiah2.dialogue-9ac8eab3cd2149d3d7812b90e1a314ba.tres"]
+
+[params]
+
+defaults=true

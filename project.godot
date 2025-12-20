@@ -18,10 +18,19 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GameManager="*res://script/GameManager.gd"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[input]
+
+interact_buttons={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [input_devices]
 
@@ -29,7 +38,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialog/board.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialog/board.dialogue", "res://dialog/buku1.dialogue", "res://dialog/buku2.dialogue", "res://dialog/buku3.dialogue", "res://dialog/bukubatas.dialogue", "res://dialog/buku4.dialogue", "res://dialog/bunga1.dialogue", "res://dialog/bunga2.dialogue", "res://dialog/bunga3.dialogue", "res://dialog/hadiah1.dialogue", "res://dialog/hadiah2.dialogue", "res://dialog/letter.dialogue", "res://dialog/key.dialogue")
 
 [layer_names]
 

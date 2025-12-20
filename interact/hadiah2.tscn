@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkf0kiiuh6bkj"]
+[gd_scene load_steps=5 format=3 uid="uid://bkf0kiiuh6bkj"]
 
 [ext_resource type="Script" uid="uid://b7nw8l888076i" path="res://dialog/interactable.gd" id="1_8perk"]
+[ext_resource type="Resource" uid="uid://cx7vjvusqap58" path="res://dialog/hadiah2.dialogue" id="2_3i6g7"]
 [ext_resource type="Texture2D" uid="uid://d0x7ly18vc4l" path="res://assets/tcd.png" id="2_t7a0k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3i6g7"]
@@ -8,6 +9,7 @@ size = Vector2(55, 69)
 
 [node name="Hadiah2" type="Area2D"]
 script = ExtResource("1_8perk")
+dialogue_resource = ExtResource("2_3i6g7")
 
 [node name="Tcd" type="Sprite2D" parent="."]
 position = Vector2(0, -4)
