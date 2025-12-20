@@ -1,6 +1,6 @@
 extends Node
 
-var total_items: int = 1 
+var total_items: int = 11
 var items_found: int = 0
 
 func collect_item():
